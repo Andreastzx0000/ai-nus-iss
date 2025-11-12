@@ -1,0 +1,205 @@
+.container {
+  min-height: 100vh;
+  background: var(--color-neutral-1);
+  display: flex;
+}
+
+.sidebar {
+  width: 280px;
+  background: var(--color-neutral-2);
+  border-right: 1px solid var(--color-neutral-6);
+  padding: var(--space-5);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebarTitle {
+  font-size: var(--font-size-2);
+  font-weight: 700;
+  color: var(--color-neutral-12);
+  margin: 0 0 var(--space-4);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.navSection {
+  margin-bottom: var(--space-3);
+}
+
+.navSectionTitle {
+  font-size: var(--font-size-0);
+  font-weight: 600;
+  color: var(--color-neutral-11);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 var(--space-2);
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-2);
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-11);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navLink:hover {
+  background: var(--color-neutral-3);
+  color: var(--color-neutral-12);
+}
+
+.navLink.active {
+  background: var(--color-accent-3);
+  color: var(--color-accent-11);
+}
+
+.content {
+  flex: 1;
+  padding: var(--space-6) var(--space-7);
+  max-width: 1000px;
+}
+
+.content h1 {
+  font: var(--font-display);
+  color: var(--color-neutral-12);
+  margin: 0 0 var(--space-3);
+}
+
+.content h2 {
+  font: var(--font-heading);
+  color: var(--color-neutral-12);
+  margin: var(--space-6) 0 var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-neutral-6);
+}
+
+.content h2:first-of-type {
+  margin-top: var(--space-5);
+  padding-top: 0;
+  border-top: none;
+}
+
+.content h3 {
+  font-size: var(--font-size-2);
+  font-weight: 600;
+  color: var(--color-neutral-12);
+  margin: var(--space-5) 0 var(--space-3);
+}
+
+.content p {
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-11);
+  line-height: 1.7;
+  margin: 0 0 var(--space-4);
+}
+
+.content ul,
+.content ol {
+  margin: 0 0 var(--space-4);
+  padding-left: var(--space-6);
+}
+
+.content li {
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-11);
+  line-height: 1.7;
+  margin-bottom: var(--space-2);
+}
+
+.content code {
+  font-family: var(--font-monospace-code);
+  font-size: var(--font-size-0);
+  background: var(--color-neutral-3);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-1);
+  color: var(--color-accent-11);
+}
+
+.content pre {
+  background: var(--color-neutral-2);
+  border: 1px solid var(--color-neutral-6);
+  border-radius: var(--radius-3);
+  padding: var(--space-4);
+  overflow-x: auto;
+  margin: 0 0 var(--space-4);
+}
+
+.content pre code {
+  background: none;
+  padding: 0;
+  color: var(--color-neutral-12);
+  font-size: var(--font-size-1);
+}
+
+.infoBox {
+  background: var(--color-info-2);
+  border-left: 4px solid var(--color-info-9);
+  border-radius: var(--radius-2);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.infoBox p {
+  margin: 0;
+  color: var(--color-info-12);
+}
+
+.warningBox {
+  background: var(--color-warning-2);
+  border-left: 4px solid var(--color-warning-9);
+  border-radius: var(--radius-2);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.warningBox p {
+  margin: 0;
+  color: var(--color-warning-12);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-4) 0;
+  background: var(--color-neutral-2);
+  border: 1px solid var(--color-neutral-6);
+  border-radius: var(--radius-3);
+  overflow: hidden;
+}
+
+.table th {
+  background: var(--color-neutral-3);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--font-size-1);
+  font-weight: 600;
+  color: var(--color-neutral-12);
+  border-bottom: 1px solid var(--color-neutral-6);
+}
+
+.table td {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-11);
+  border-bottom: 1px solid var(--color-neutral-6);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,109 @@
+.message {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  animation: var(--animation-fade-in);
+}
+
+.message.user {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-round);
+  background: var(--color-accent-9);
+  color: var(--color-accent-contrast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--font-size-1);
+  flex-shrink: 0;
+}
+
+.message.user .avatar {
+  background: var(--color-neutral-9);
+  color: var(--color-neutral-contrast);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 70%;
+}
+
+.message.user .content {
+  align-items: flex-end;
+}
+
+.bubble {
+  background: var(--color-neutral-2);
+  border: 1px solid var(--color-neutral-6);
+  border-radius: var(--radius-3);
+  padding: var(--space-3) var(--space-4);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.message.user .bubble {
+  background: var(--color-accent-9);
+  color: var(--color-accent-contrast);
+  border-color: var(--color-accent-9);
+}
+
+.metadata {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-0);
+  color: var(--color-neutral-11);
+}
+
+.citations {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.citation {
+  background: var(--color-neutral-1);
+  border: 1px solid var(--color-neutral-6);
+  border-radius: var(--radius-2);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-0);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.citationHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  color: var(--color-neutral-12);
+}
+
+.citationExcerpt {
+  color: var(--color-neutral-11);
+  font-size: var(--font-size-00);
+  line-height: 1.5;
+}
+
+.confidence {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px var(--space-2);
+  background: var(--color-success-3);
+  color: var(--color-success-11);
+  border-radius: var(--radius-2);
+  font-size: var(--font-size-00);
+  font-weight: 500;
+}
